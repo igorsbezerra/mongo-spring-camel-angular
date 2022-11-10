@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+	border-collapse: collapse;
+	text-align: left;
+	border-top: 1px solid #888;
+}
+table thead {
+	background: #4254f5;
+  color: #FFF;
+}
+table tr:nth-child(even) {
+	background: #dfdfdf;
+}
+table th, table td {
+	padding: 10px 20px;
+	border: 1px solid #888;
+	border-width: 0 1px 1px;
+}
+
+@media screen and (max-width: 1000px) {
+	table td {
+		display: block;
+		text-align: right;
+	}
+
+	table td:before {
+		content: attr(data-label);
+		float: left;
+		font-weight: bold;
+		margin-right: 10px;
+	}
+	table thead {
+		display: none;
+	}
+}
